@@ -95,8 +95,6 @@ REST_ROUTER.prototype.handleRoutes= function(router,connection,md5) {
   //         res.end(JSON.stringify(data));
   //     });
   // });
-  //je n arrive pas a faire fonctionner cette partie et avec les parametres q et count, je souhaite avoir une correction sur ce point la.
-    //merci
 
   router.get("/users/search", function(req,res){
       connection.query('SELECT * FROM user WHERE email LIKE "%'+req.query.search+'%"',function(err,rows,fields) {
